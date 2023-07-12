@@ -1,5 +1,6 @@
-import { MDXComponents } from "mdx/types"
 import { useMDXComponent } from "next-contentlayer/hooks"
+
+import { MDXComponents } from "mdx/types"
 import "@/styles/mdx.css"
 
 const components: MDXComponents = {
