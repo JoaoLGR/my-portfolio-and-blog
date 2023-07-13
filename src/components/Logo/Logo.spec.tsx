@@ -6,7 +6,7 @@ describe("Logo", () => {
   it("should render in screen", () => {
     render(<Logo />)
 
-    const logoText = screen.getByRole("heading", { name: "Logo" })
+    const logoText = screen.getByRole("img", { name: "logo" })
 
     expect(logoText).toBeInTheDocument()
   })
