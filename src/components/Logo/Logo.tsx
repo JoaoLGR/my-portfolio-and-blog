@@ -1,7 +1,15 @@
+import Image from "next/image"
+
 export function Logo() {
   return (
     <div>
-      <h2>Logo</h2>
+      <Image
+        className="shadow-lg"
+        src="/assets/images/logoJL.png"
+        alt="logo"
+        width={45}
+        height={45}
+      />
     </div>
   )
 }

@@ -30,7 +30,7 @@ export const Nav = tw.nav`
 
 export const List = tw.ul`
   flex 
-  gap-4
+  gap-6
 `
 
 export const ListItem = tw.li`

@@ -16,7 +16,13 @@ export function Header() {
               <Link href="/home">Home</Link>
             </S.ListItem>
             <S.ListItem>
-              <Link href="/about">About</Link>
+              <Link href="/about">Artigos</Link>
+            </S.ListItem>
+            <S.ListItem>
+              <Link href="/about">Projetos</Link>
+            </S.ListItem>
+            <S.ListItem>
+              <Link href="/about">Sobre mim</Link>
             </S.ListItem>
           </S.List>
         </S.Nav>
