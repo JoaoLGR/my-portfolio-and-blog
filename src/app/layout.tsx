@@ -1,4 +1,8 @@
+import { nav } from "@/configs"
+
+import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
+import { Layout } from "@/components/Layout"
 import "@/styles/globals.css"
 
 export const metadata = {
@@ -14,8 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-primary text-gray-200">
-        <Header />
-        {children}
+        <Header items={nav} />
+        <Layout>{children}</Layout>
+        <Footer items={nav} />
       </body>
     </html>
   )
