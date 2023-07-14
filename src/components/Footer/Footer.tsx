@@ -11,8 +11,8 @@ export function Footer({ items }: { items: Nav }) {
   const fullYear = new Date().getFullYear()
 
   return (
-    <S.Container>
-      <Layout>
+    <Layout>
+      <S.Container>
         <S.Content>
           <S.Section>
             <S.TitleOfSection>João Lucas</S.TitleOfSection>
@@ -43,7 +43,7 @@ export function Footer({ items }: { items: Nav }) {
         <p className="translate-y-10 text-center">
           Todos os direitos reservados © João Lucas {fullYear}
         </p>
-      </Layout>
-    </S.Container>
+      </S.Container>
+    </Layout>
   )
 }
