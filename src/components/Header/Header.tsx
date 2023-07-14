@@ -1,10 +1,12 @@
 import Link from "next/link"
 
+import { Nav } from "@/types"
+
 import { Logo } from "@/components/Logo"
 
 import * as S from "./styles"
 
-export function Header() {
+export function Header({ items }: { items: Nav }) {
   return (
     <S.Container>
       <S.Content>
@@ -12,18 +14,11 @@ export function Header() {
 
         <S.Nav>
           <S.List>
-            <S.ListItem>
-              <Link href="/home">Home</Link>
-            </S.ListItem>
-            <S.ListItem>
-              <Link href="/about">Artigos</Link>
-            </S.ListItem>
-            <S.ListItem>
-              <Link href="/about">Projetos</Link>
-            </S.ListItem>
-            <S.ListItem>
-              <Link href="/about">Sobre mim</Link>
-            </S.ListItem>
+            {items.map(({ title, href }) => (
+              <S.ListItem key={title}>
+                <Link href={href}>{title}</Link>
+              </S.ListItem>
+            ))}
           </S.List>
         </S.Nav>
       </S.Content>

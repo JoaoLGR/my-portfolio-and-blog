@@ -4,8 +4,7 @@ export function Logo() {
   return (
     <div>
       <Image
-        className="shadow-lg"
-        src="/assets/images/logoJL.png"
+        src="/assets/images/logoJL2.png"
         alt="logo"
         width={45}
         height={45}
