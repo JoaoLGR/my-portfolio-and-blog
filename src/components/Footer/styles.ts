@@ -4,8 +4,8 @@ export const Container = tw.footer`
   h-64
   w-full
   border-t
-  border-slate-50
-  bg-secondary
+  border-slate-700
+  bg-primary
 `
 
 export const Content = tw.div`
