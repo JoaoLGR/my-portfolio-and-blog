@@ -5,6 +5,16 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}"
   ],
+  safelist: [
+    {
+      pattern: /^grid-cols-/,
+      variants: ["sm", "md", "lg", "xl", "xxl"]
+    },
+    {
+      pattern: /^gap-/,
+      variants: ["sm", "md", "lg", "xl", "xxl"]
+    }
+  ],
   theme: {
     extend: {
       colors: {
