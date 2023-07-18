@@ -2,7 +2,7 @@ import { Nav } from "@/types"
 
 export const nav: Nav = [
   {
-    title: "Home",
+    title: "Início",
     href: "/home"
   },
   {
@@ -12,9 +12,5 @@ export const nav: Nav = [
   {
     title: "Projetos",
     href: "/projects"
-  },
-  {
-    title: "Sobre mim",
-    href: "/about"
   }
 ]
