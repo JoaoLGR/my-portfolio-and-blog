@@ -5,5 +5,5 @@ export const Container = tw.div`
   w-full
   max-w-4xl
   px-6
-  lg:max-w-5xl
+  lg:max-w-6xl
 `
