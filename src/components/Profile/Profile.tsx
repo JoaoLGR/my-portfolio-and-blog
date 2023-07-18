@@ -31,7 +31,7 @@ export function Profile({ profileInfos }: ProfileProps) {
 
         <S.AboutMe>{about}</S.AboutMe>
 
-        <div className="mt-10">
+        <div className="mt-6">
           <Skills items={skillsIcons} />
         </div>
       </S.Container>

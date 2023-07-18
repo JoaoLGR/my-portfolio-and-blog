@@ -5,7 +5,7 @@ export const Container = tw.div``
 export const ImageContent = tw.div`
   flex
   items-center
-  mb-8
+  mb-6
   gap-20
 `
 
