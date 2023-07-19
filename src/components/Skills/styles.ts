@@ -4,16 +4,19 @@ export const Container = tw.div``
 
 export const Title = tw.h2`
   mb-6
-  text-center
+  text-start
   font-bold
-  text-3xl
+  text-md
+
+  lg:text-2xl
 `
 
 export const Card = tw.div`
   flex
-  h-16
-  w-60
+  h-20
+  w-24
   items-center
+  justify-center
   gap-6
   rounded-md
   border
@@ -21,7 +24,20 @@ export const Card = tw.div`
   p-4
   shadow-md
   shadow-link
-  duration-700
+  transition-colors
+  duration-300
+  ease-in-out
+  
+  md:w-52
+  lg:w-72
+  md:justify-around
 
   hover:bg-secondary
+`
+
+export const Description = tw.p`
+  hidden
+  
+  md:w-3/4
+  md:block
 `
