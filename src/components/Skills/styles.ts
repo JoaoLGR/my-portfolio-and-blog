@@ -13,7 +13,7 @@ export const Title = tw.h2`
 
 export const Card = tw.div`
   flex
-  h-20
+  h-16
   w-24
   items-center
   justify-center
