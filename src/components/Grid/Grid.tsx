@@ -11,13 +11,13 @@ type GridProps = {
 
 export function Grid({
   children,
-  cols = 1,
+  cols = 3,
   sm,
   md,
   lg,
   xl,
   xxl,
-  gap = 6
+  gap
 }: GridProps) {
   const small = sm ? `sm:grid-cols-${sm}` : ""
   const medium = md ? `md:grid-cols-${md}` : ""
