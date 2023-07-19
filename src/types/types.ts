@@ -5,13 +5,12 @@ export type NavItem = {
 
 export type Nav = NavItem[]
 
-export type Social = {
-  network: string
+export type SocialMedia = {
+  viewBox: string
+  d: string
+  id: string
   href: string
-  icon?: React.ReactNode
-}
-
-export type SocialMedia = Social[]
+}[]
 
 export type Icons = {
   size: number

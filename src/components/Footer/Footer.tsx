@@ -1,46 +1,31 @@
 import Link from "next/link"
 
 import { socialMedia } from "@/configs"
-import { Nav } from "@/types"
 
 import { Layout } from "@/components/Layout"
 
 import * as S from "./styles"
 
-export function Footer({ items }: { items: Nav }) {
+export function Footer() {
   const fullYear = new Date().getFullYear()
 
   return (
     <Layout>
       <S.Container>
         <S.Content>
-          <S.Section>
-            <S.TitleOfSection>João Lucas</S.TitleOfSection>
-          </S.Section>
-
-          <S.Section>
-            <S.TitleOfSection>Minhas redes</S.TitleOfSection>
-            {socialMedia.map(({ href, network }) => (
-              <S.List key={network}>
-                <Link href={href} target="_blank" className="hover:text-link">
-                  {network}
-                </Link>
-              </S.List>
-            ))}
-          </S.Section>
-
-          <S.Section>
-            <S.TitleOfSection>Blogmap</S.TitleOfSection>
-            <S.List>
-              {items.map(({ title, href }) => (
-                <S.ListItem key={title}>
-                  <Link href={href}>{title}</Link>
-                </S.ListItem>
-              ))}
-            </S.List>
-          </S.Section>
+          {socialMedia.map((item) => (
+            <Link key={item.id} target="_blank" href={item.href}>
+              <svg
+                viewBox={item.viewBox}
+                className="w-6 md:w-8"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d={item.d} fill="#FFF" />
+              </svg>
+            </Link>
+          ))}
         </S.Content>
-        <p className="translate-y-10 text-center">
+        <p className="text-center text-slate-500">
           Todos os direitos reservados © João Lucas {fullYear}
         </p>
       </S.Container>
