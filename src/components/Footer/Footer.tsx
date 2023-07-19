@@ -15,13 +15,9 @@ export function Footer() {
         <S.Content>
           {socialMedia.map((item) => (
             <Link key={item.id} target="_blank" href={item.href}>
-              <svg
-                viewBox={item.viewBox}
-                className="w-6 md:w-8"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d={item.d} fill="#FFF" />
-              </svg>
+              <S.Icon viewBox={item.viewBox} xmlns="http://www.w3.org/2000/svg">
+                <path d={item.d} />
+              </S.Icon>
             </Link>
           ))}
         </S.Content>

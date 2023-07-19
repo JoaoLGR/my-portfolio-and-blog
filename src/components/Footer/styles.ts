@@ -12,3 +12,13 @@ export const Content = tw.div`
   gap-6
   py-4
 `
+
+export const Icon = tw.svg`
+  w-6
+  fill-white
+  transition-colors
+  duration-300
+  ease-in-out
+  hover:fill-link
+  md:w-8
+`
