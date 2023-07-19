@@ -6,7 +6,6 @@ export const Container = tw.header`
   flex
   h-16
   w-full
-  items-center
   bg-secondary
   shadow-lg
 
@@ -19,11 +18,11 @@ export const Content = tw.div`
   w-full
   items-center
   justify-between
-  px-4
 `
 
 export const Nav = tw.nav`
-  flex
+  hidden
+  lg:flex
   items-center
   justify-between
 `

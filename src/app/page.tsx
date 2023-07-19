@@ -1,6 +1,8 @@
-import { allPosts } from "contentlayer/generated"
+import { profileInfos } from "@/configs/profile"
+import { skillsIcons } from "@/configs/skillsIcons"
 
-import { Mdx } from "@/components/Mdx"
+import { Profile } from "@/components/Profile"
+import { Skills } from "@/components/Skills"
 
 export const metadata = {
   title: "Home | João Lucas",
@@ -9,10 +11,12 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h2>Hello world!</h2>
-      <h1>{allPosts[0].title}</h1>
-      <Mdx code={allPosts[0].body.code} />
+    <main className="py-24">
+      <Profile profileInfos={profileInfos} />
+
+      <div className="mt-10">
+        <Skills items={skillsIcons} />
+      </div>
     </main>
   )
 }
