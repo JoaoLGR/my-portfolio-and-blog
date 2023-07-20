@@ -26,3 +26,11 @@ export type ProfileType = {
   title: string
   about: string
 }
+
+export type ExperienciesType = {
+  company: string
+  href: string
+  logoCompany: string
+  positionCompany: string
+  timeInCompany: string
+}[]
