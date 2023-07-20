@@ -1,6 +1,7 @@
 import { profileInfos } from "@/configs/profile"
 import { skillsIcons } from "@/configs/skillsIcons"
 
+import { Experiencies } from "@/components/Experiencies"
 import { Profile } from "@/components/Profile"
 import { Skills } from "@/components/Skills"
 
@@ -16,6 +17,9 @@ export default function Home() {
 
       <div className="mt-10">
         <Skills items={skillsIcons} />
+      </div>
+      <div className="mt-10">
+        <Experiencies />
       </div>
     </main>
   )
