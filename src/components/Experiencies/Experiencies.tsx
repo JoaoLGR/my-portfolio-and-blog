@@ -3,26 +3,35 @@ import Link from "next/link"
 
 import { experiencies } from "@/configs/experiencies"
 
+import { Grid } from "@/components/Grid"
+
+import * as S from "./styles"
+
 export function Experiencies() {
   return (
-    <div className="flex w-full flex-col gap-4">
-      {experiencies.map((item) => (
-        <div className="flex items-center gap-4" key={item.company}>
-          <Link href={item.href} target="_blank">
-            <Image
-              width={60}
-              height={60}
-              src={item.logoCompany}
-              alt="logo da empresa doal"
-            />
-          </Link>
-          <div>
-            <p className="text-lg font-bold">{item.company}</p>
-            <p className="text-sm text-slate-500">{item.timeInCompany}</p>
-            <p>{item.positionCompany}</p>
-          </div>
-        </div>
-      ))}
-    </div>
+    <S.Container>
+      <S.Title>Experiências</S.Title>
+
+      <Grid cols={1} gap={4} md={2} lg={3}>
+        {experiencies.map((item) => (
+          <S.Card key={item.company}>
+            <Link href={item.href} target="_blank">
+              <Image
+                width={60}
+                height={60}
+                src={item.logoCompany}
+                alt={`logo da empresa ${item.company}`}
+              />
+            </Link>
+
+            <S.CardContent>
+              <S.CompanyName>{item.company}</S.CompanyName>
+              <S.TimeDescription>{item.timeInCompany}</S.TimeDescription>
+              <S.PositionCompany>{item.positionCompany}</S.PositionCompany>
+            </S.CardContent>
+          </S.Card>
+        ))}
+      </Grid>
+    </S.Container>
   )
 }

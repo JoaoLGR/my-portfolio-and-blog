@@ -29,10 +29,10 @@ export function Grid({
   const responsive = `${small} ${medium} ${large} ${extraLarge} ${extraExtraLarge} ${gapSize}`
 
   return (
-    <>
-      <div className={`grid grid-cols-${cols} ${responsive} w-full`}>
-        {children}
-      </div>
-    </>
+    <div
+      className={`grid grid-cols-${cols} ${responsive} w-full justify-between`}
+    >
+      {children}
+    </div>
   )
 }
